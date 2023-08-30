@@ -13,7 +13,7 @@ jobs:
           java-version: '8'
           distribution: 'adopt'
       - name: Deploy to GitHub
-        run: mvn --batch-mode -DuseGitHubPackages=true deploy -p aislib-release
+        run: mvn --batch-mode -DuseGitHubPackages=true deploy -P aislib-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
