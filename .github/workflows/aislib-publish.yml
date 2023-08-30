@@ -11,6 +11,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '8'
+          distribution: 'adopt'
       - name: Deploy to GitHub
         run: mvn --batch-mode -DuseGitHubPackages=true deploy -p aislib-release
         env:
