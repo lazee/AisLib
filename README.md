@@ -1,6 +1,8 @@
 AisLib
-[![Build Status](https://travis-ci.com/dma-ais/AisLib.svg?branch=master)](https://travis-ci.com/dma-ais/AisLib)
 ======
+
+TEMPORARY FORK OF https://github.com/dma-ais/AisLib THAT REMOVES THE CRITICAL System.out.println() in v2.8.2.
+
 
 ## Introduction ##
 
@@ -31,8 +33,8 @@ To build
 To run tests
 
 	mvn test
-	
----	
+
+---
 
 NOTE: Temporary manual build procedure described here: <https://github.com/dma-ais/AisLib/issues/48#issuecomment-448634262>.
 
@@ -72,7 +74,7 @@ AisMessage aisMessage = AisMessage.getInstance(vdm);
 ```
 ##### For multiple messages (AisMessage5) #####
 ```java
-String aisSentence1 = "!AIVDM,2,1,9,B,53nFBv01SJ<thHp6220H4heHTf2222222222221?50:454o<`9QSlUDp,0*09"; 
+String aisSentence1 = "!AIVDM,2,1,9,B,53nFBv01SJ<thHp6220H4heHTf2222222222221?50:454o<`9QSlUDp,0*09";
 String aisSentence2 = "!AIVDM,2,2,9,B,888888888888880,2*2E";
 
 Vdm vdm = new Vdm();
@@ -250,7 +252,7 @@ AisMessages can be decoded to human readable JSON messages automatically with a 
 String aisSentence = "!AIVDM,1,1,,A,181:Jqh02c1Qra`E46I<@9n@059l,0*30";
 Decoder decoder = new Decoder(aisSentence);
 String json = decoder.decode(true);
-``` 
+```
 outputs
 ```json
 {
